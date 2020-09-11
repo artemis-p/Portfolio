@@ -7,6 +7,11 @@
 /* Custom properties, could be updated */
 
 /* Specificity is the means by which the browser decide which CSS property values are the most relevant to an element and therefore, will be applied. */
+/* ff-font family
+fw-font weight
+clr-colour
+fs-font size */
+
 :root {
   --ff-primary: 'Source Sans Pro', sans-serif;
   --ff-secondary: 'Source Code Pro', monospace;
@@ -45,9 +50,18 @@ body {
   line-height: 1.6;
 }
 
+section {
+  padding: 5em 2em;
+}
+
 img {
   display: block;
   max-width: 100%;
+}
+
+
+strong {
+  font-weight: var(--fw-bold);
 }
 
 /* Typography */
@@ -61,3 +75,49 @@ h3 {
 h1 {
   font-size: var(--fs-h1);
 }
+
+h2 {
+  font-size: var(--fs-h2);
+}
+
+h3 {
+  font-size: var(--fs-h3);
+}
+
+.section__title {
+  margin-bottom: .25em;
+}
+
+.section__title--intro {
+  font-weight: var(--fw-reg);
+}
+
+.section__title--intro strong {
+  display: block;
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro,
+.section__subtitle--about {
+  background: var(--clr-accent);
+  font-family: var(--ff-secondary);
+}
+
+
+/* header */
+
+nav {
+  display: none;
+}
+
+
+/* Intro section */
+
+.intro {
+  position: relative;
+}
+
