@@ -28,7 +28,8 @@ fs-font size */
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
 
-  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25);
+  --bs: 0.25em 0.25em 0.75em rgba(0,0,0,.25),
+        0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 @media (min-width: 800px) {
@@ -128,6 +129,10 @@ nav {
 .intro__img {
   box-shadow: var(--bs);
 } 
+
+.section__subtitle--intro {
+  display: inline-block;
+}
 
 /* Using media queries are a popular technique for delivering a tailored style sheet (responsive web design) to desktops, laptops, tablets, and mobile phones. */
 @media (min-width: 600px) {
