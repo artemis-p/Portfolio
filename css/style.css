@@ -10,7 +10,8 @@
 /* ff-font family
 fw-font weight
 clr-colour
-fs-font size */
+fs-font size 
+bs-box shadow */
 
 :root {
   --ff-primary: 'Source Sans Pro', sans-serif;
@@ -71,7 +72,7 @@ strong {
 h1,
 h2,
 h3 {
-  line-height: 1.1;
+  line-height: 1;
   margin: 0;
 }
 
@@ -138,7 +139,8 @@ nav {
 @media (min-width: 600px) {
   .intro {
     display: grid;
-    width: min-content;
+    width: min-content; 
+    /* the width of the box is calculated on the dimension of the contents that the box itself contains = >  the length of the box is going to be the length of the longest word. it will put every word in a separate line */
     margin: 0 auto;
     grid-column-gap: 1em;
     grid-template-areas: 
@@ -148,20 +150,21 @@ nav {
   } 
 
   .intro__img {
-    grid-area: img;
+    grid-area: img; 
     min-width: 250px;
     position: relative;
     z-index: 2;
   }
 
   .section__subtitle--intro {
-    align-self: start;
-    grid-column: -1/1;
+    align-self: start; /* it specifies the alignment for the selected item inside the flexible container */
+    grid-column: -1/1; /*  it specifies a grid item's size and location in a grid layout and includes the grid column start and grid column end */
     grid-row: 2; 
-    text-align: left;
+    text-align: right;
     position: relative;
     left: -1.5em;
     width: calc(100% + 1.5em);
-  }
+  } 
 }
+
 
