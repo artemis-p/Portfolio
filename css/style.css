@@ -63,10 +63,10 @@ img {
   max-width: 100%;
 }
 
-
 strong {
   font-weight: var(--fw-bold);
 }
+
 :focus {
   outline: 3px solid var(--clr-accent);
   outline-offset: 3px;
@@ -236,6 +236,53 @@ nav {
     .service + .service {
       margin-left: 2em;
     }
+  }
+
+  /* About me section */
+
+  .about-me {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .about-me__img {
+    box-shadow: var(--bs);
+  }
+
+  @media (min-width: 600px) {
+    .about-me {
+      /* displays an element as a block-level grid container */
+      display: grid;
+      /* specifies the number and width od columns in a grid layout */
+      grid-template-columns: 1fr 200px;
+      /* it specifies areas within the grid layout */
+      grid-template-areas: 
+      "title img"
+      "subtitle img"
+      "text img";
+      grid-column-gap: 2em;
+    }
+
+    .section__title--about {
+      grid-area: title;
+    }
+
+    .section__subtitle--about {
+      grid-column: 1 / -1;
+      grid-row: 2;
+      position: relative;
+      left: -1em;
+      width: calc(100% + 2em);
+      padding-left: 1em;
+      padding-right: calc(200px + 4em);
+    }
+
+    .about-me__img {
+      grid-area: img;
+      position: relative;
+      z-index: 2;
+    }
+
   }
 }
 
