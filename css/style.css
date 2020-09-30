@@ -328,6 +328,50 @@ nav {
        opacity: .85;
      }
 
+     /* footer section */
+
+     .footer {
+       background: #111;
+       color: var(--clr-accent);
+       text-align: center;
+       padding: 2.5em 0;
+       font-size: var(--fs-h3);
+     }
+
+     .footer a { 
+       color: inherit; /* by adding this we syle the font awesome icons to have the same colour as the rest of the footer */
+       text-decoration: none;
+     }
+
+     .footer__link {
+       font-weight: var(--fw-bold);
+     }
+
+
+     .footer__link:hover,
+     .social-list__link:hover {
+       opacity: .7;
+     }
+
+     .footer__link:hover {
+       text-decoration: underline;
+     }
+
+     .social-list {
+       list-style: none; /*it removes the dots from listing the items */
+       display: flex; /*it places the icons next to each other */
+       justify-content: center; /*it centers the icons*/
+       margin: 2em 0 0;
+       padding: 0;
+     }
+
+     .social-list__item {
+       margin: 0 .5em;
+     }
+
+     .social-list__link {
+       padding:  .5em;
+     }
   }
 }
 
