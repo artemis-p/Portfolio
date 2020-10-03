@@ -45,6 +45,11 @@ bs-box shadow */
 
 /* General styles */
 
+html {
+  scroll-behavior: smooth; 
+  /* adds smooth scrolling on the button "My work" and also, when choosing a link on the nav menu it scrolls after closing the nav menu */
+}
+
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -204,15 +209,35 @@ header {
   z-index: 1000;
 }
 
+.nav-open .nav {
+  transform: translateX(0);
+}
+
+.nav-open .nav-toggle {
+  position: fixed;
+}
+
+.nav-open .hamburger {
+  transform: rotate(.625turn);
+}
+
 .hamburger {
   display: block;
   position: relative;
 }
 
+.nav-open .hamburger::before {
+  transform: rotate(90deg) translateX(-6px);
+}
+
+.nav-open .hamburger::after {
+  opacity: 0;
+}
+
 .hamburger,
 .hamburger::before,
 .hamburger::after {
-  background: var(--clr-dark);
+  background: var(--clr-accent);
   width: 2em;
   height: 3px;
   border-radius: 1em;
@@ -228,8 +253,8 @@ header {
 }
 
 
-.hamburger::before {top: 6px;}
-.hamburger::after { bottom: 6px;}
+.hamburger::before { top: 6px; }
+.hamburger::after { bottom: 6px; }
 
 /* Intro section */
 
