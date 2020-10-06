@@ -17,12 +17,13 @@ bs-box shadow */
   --ff-primary: 'Source Sans Pro', sans-serif;
   --ff-secondary: 'Source Code Pro', monospace;
 
-  --fw-reg: 300;
+  --fw-reg: 700;
   --fw-bold: 900;
 
-  --clr-light: #fff;
-  --clr-dark: #303030;
-  --clr-accent: #16e0bd;
+  --clr-light: rgb(184, 152, 184);
+  --clr-dark: rgb(8, 8, 95);
+  --clr-accent:  rgb(229, 209, 160);
+  --clr-footer: rgb(229, 209, 160);
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
@@ -436,8 +437,8 @@ header {
      /* footer section */
 
      .footer {
-       background: #111;
-       color: var(--clr-accent);
+       background: var(--clr-footer);
+       color: var(--clr-dark);
        text-align: center;
        padding: 2.5em 0;
        font-size: var(--fs-h3);
